@@ -1,0 +1,41 @@
+﻿@model AnimalCrossing.Models.Cat
+<h4>Cat</h4>
+
+@Html.ValidationSummary()
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="form-group">
+    <label asp-for="Name" class="control-label"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="Gender" class="control-label"></label>
+    <select asp-for="Gender" class="form-control" asp-items="@Html.GetEnumSelectList<Gender>()"></select>
+    <span asp-validation-for="Gender" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="SpeciesId" class="control-label"></label>
+    <input asp-for="SpeciesId" class="form-control" />
+    <span asp-validation-for="SpeciesId" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="BirthDate" class="control-label"></label>
+    <input asp-for="BirthDate" class="form-control" />
+    <span asp-validation-for="BirthDate" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="ProfilePicture" class="control-label"></label>
+    <input asp-for="ProfilePicture" class="form-control" />
+    <span asp-validation-for="ProfilePicture" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Description" class="control-label"></label>
+    <input asp-for="Description" class="form-control" />
+    <span asp-validation-for="Description" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <input type="submit" value="Save" class="btn btn-primary" />
+</div>
+

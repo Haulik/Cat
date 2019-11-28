@@ -2,7 +2,7 @@
 
 
 @using (Html.BeginForm()) {
-    @await Html.PartialAsync("_CatForm", Model)
+    @await Html.PartialAsync("_EditShared", Model)
 
     @Html.HiddenFor(x => x.CatId)
 }
